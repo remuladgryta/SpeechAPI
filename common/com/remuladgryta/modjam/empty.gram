@@ -1,0 +1,6 @@
+#JSGF V1.0;
+
+
+grammar empty;
+
+public <empy> = <VOID>;
