@@ -21,7 +21,7 @@ public class ClientProxy extends CommonProxy {
 		API.get().addDictionaryEntry(
 				this.getClass().getResource(
 						"/com/remuladgryta/modjam/res/testaddenda.dict"));
-		API.get().addGrammarEntry("person", "anton | paul | evandro | will", false);
+		API.get().addGrammarEntry("person", "paul | evandro | will", false);
 		//API.get().addGrammarEntry("greeting", "Hello | Good morning", false);
 		API.get().addGrammarEntry("phrase","(hello | good morning) <person>",true);
 		API.get().addGrammarEntry("thuum", "fus", true);

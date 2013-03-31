@@ -20,7 +20,7 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void preInit(FMLPreInitializationEvent e){
 		super.preInit(e);
-		URL url = this.getClass().getResource("/mojamconfig.xml");
+		URL url = this.getClass().getResource("/modjamconfig.xml");
 		
 		Handler[] handlers = FMLLog.getLogger().getHandlers();
 		cm = new ConfigurationManager(url);
