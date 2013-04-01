@@ -2,6 +2,10 @@ package com.remuladgryta.modjam;
 
 import java.util.logging.Level;
 
+import javax.speech.recognition.RuleGrammar;
+
+import com.sun.speech.engine.recognition.BaseRuleGrammar;
+
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -16,6 +20,7 @@ public class RecordingHandler {
 	private Microphone microphone;
 	private RecognitionThread recogThread;
 	private ConfigurationManager cm;
+	private RuleGrammar ruleGrammar;
 	private RecordingHandler() {
 		if (FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT) {
 			cm = ((ClientProxy) ModjamMod.proxy)
@@ -23,6 +28,7 @@ public class RecordingHandler {
 			recognizer = (Recognizer) cm.lookup("recognizer");
 			
 			microphone = (Microphone) cm.lookup("microphone");
+			ruleGrammar = new BaseRuleGrammar(API.get().jsapiRecognizer, API.get().jsgfGrammar.getRuleGrammar());
 		}
 
 	}
@@ -39,7 +45,7 @@ public class RecordingHandler {
 			return;
 		}
 			//recognizer = (Recognizer) cm.lookup("recognizer");
-			recogThread = new RecognitionThread(recognizer);	
+			recogThread = new RecognitionThread(recognizer, ruleGrammar);	
 			recogThread.start();
 	}
 

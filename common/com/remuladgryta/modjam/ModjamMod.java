@@ -9,7 +9,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.PostInit;
 
-@Mod(modid="ModjamMod", version="0.1")
+@Mod(modid="ModjamMod",name="Mod jam mod 2013", version="0.2")
 public class ModjamMod {
 	@Instance("ModjamMod")
 	public static ModjamMod instance;

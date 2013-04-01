@@ -38,8 +38,8 @@ public class API {
 	private LinkedList<URL> dictList;
 	private LinkedList<JSGFEntry> grammarList;
 	private Recognizer recognizer;
-	private JSGFGrammar jsgfGrammar;
-	private BaseRecognizer jsapiRecognizer;
+	protected JSGFGrammar jsgfGrammar;
+	protected BaseRecognizer jsapiRecognizer;
 	private RuleGrammar ruleGrammar;
 	private	ConfigurationManager cm;
 	private static API instance = null;
@@ -92,7 +92,7 @@ public class API {
 	protected void compileGrammar() {
 		recognizer = (Recognizer) cm.lookup("recognizer");
 		jsgfGrammar = (JSGFGrammar) cm.lookup("jsgfGrammar");
-
+		
 		jsapiRecognizer = new BaseRecognizer(jsgfGrammar.getGrammarManager());
 		try {
 			jsapiRecognizer.allocate();

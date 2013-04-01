@@ -95,7 +95,7 @@
     <component name="jsgfGrammar" type="edu.cmu.sphinx.jsgf.JSGFGrammar">
         <property name="dictionary" value="dictionary"/>
         <property name="grammarLocation" 
-             value="resource:/com/remuladgryta/modjam"/>
+             value="resource:/com/remuladgryta/modjam/"/>
         <property name="grammarName" value="empty"/>
 	<property name="logMath" value="logMath"/>
     </component>
