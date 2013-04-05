@@ -14,11 +14,9 @@ The specific build artifacts from those projects that are used are:
 
 These dependencies are bundled with the compiled version of this mod according to their respective licenses (http://cmusphinx.sourceforge.net/sphinx4/license.terms and http://pastebin.com/gSGM0rUh).
 
-Currently, there is a bug which requires you to extract /com/remuladgryta/modjam/empty.gram from the jar to mods/com/remuladgryta/modjam/empty.gram. This will be fixed in an upcoming version.
-
 USAGE
 -----
-The modjam.jar doesn't do anything on its own, but rather provides an API for other mods. 
+The SpeechAPI.jar doesn't do anything on its own, but rather provides an API for other mods. 
 The modjamtest.jar however makes very basic use of this api. Type start into the chat window and it'll start listening for speech input and log any detected valid sentences. Type stop and it'll stop listening.
 
 Valid sentences to speak are:
