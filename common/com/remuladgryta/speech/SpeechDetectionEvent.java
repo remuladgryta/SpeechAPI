@@ -1,4 +1,4 @@
-package com.remuladgryta.modjam;
+package com.remuladgryta.speech;
 
 import net.minecraftforge.event.Event;
 import cpw.mods.fml.relauncher.Side;

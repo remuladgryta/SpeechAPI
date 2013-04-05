@@ -1,4 +1,4 @@
-package com.remuladgryta.modjam.test;
+package com.remuladgryta.speech.test;
 
 public class CommonProxy {
 	public void init(){

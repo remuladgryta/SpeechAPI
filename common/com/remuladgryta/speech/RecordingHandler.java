@@ -1,4 +1,4 @@
-package com.remuladgryta.modjam;
+package com.remuladgryta.speech;
 
 import java.util.logging.Level;
 
@@ -23,12 +23,12 @@ public class RecordingHandler {
 	private RuleGrammar ruleGrammar;
 	private RecordingHandler() {
 		if (FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT) {
-			cm = ((ClientProxy) ModjamMod.proxy)
+			cm = ((ClientProxy) SpeechAPI.proxy)
 					.getConfigManager();
 			recognizer = (Recognizer) cm.lookup("recognizer");
 			
 			microphone = (Microphone) cm.lookup("microphone");
-			ruleGrammar = new BaseRuleGrammar(API.get().jsapiRecognizer, API.get().jsgfGrammar.getRuleGrammar());
+			ruleGrammar = new BaseRuleGrammar(ConfigurationHelper.get().jsapiRecognizer, ConfigurationHelper.get().jsgfGrammar.getRuleGrammar());
 		}
 
 	}
@@ -40,7 +40,7 @@ public class RecordingHandler {
 	}
 
 	public void startRecording() {
-		if(!microphone.startRecording()){
+		if(microphone == null || !microphone.startRecording()){
 			LogHelper.log(Level.SEVERE,"Unable to start microphone");
 			return;
 		}

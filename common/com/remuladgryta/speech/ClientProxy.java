@@ -1,6 +1,7 @@
-package com.remuladgryta.modjam;
+package com.remuladgryta.speech;
 
 import java.io.File;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.logging.Handler;
 import java.util.logging.Level;
@@ -34,15 +35,17 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void init(FMLInitializationEvent e){
 		super.init(e);
-
-		API.get();//trigger api load
+		
+		API.get().addDictionaryEntry(this.getClass().getResource("/WSJ_8gau_13dCep_16k_40mel_130Hz_6800Hz/dict/cmudict.0.6d"));
+		
 	}
 	
 	@Override
 	public void postInit(FMLPostInitializationEvent e){
 		super.postInit(e);
-		API.get().compileDictionary();
-		API.get().compileGrammar();
+		ConfigurationHelper.get().compileDictionary();
+		ConfigurationHelper.get().compileGrammar();
+		RecordingHandler.instance(); //get the recordinghanlder to load. this is a hackish solution.
 		
 	}
 	

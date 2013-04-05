@@ -1,4 +1,4 @@
-package com.remuladgryta.modjam;
+package com.remuladgryta.speech;
 
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;

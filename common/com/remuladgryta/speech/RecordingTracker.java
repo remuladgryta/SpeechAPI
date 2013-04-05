@@ -1,4 +1,4 @@
-package com.remuladgryta.modjam;
+package com.remuladgryta.speech;
 
 import java.util.HashMap;
 

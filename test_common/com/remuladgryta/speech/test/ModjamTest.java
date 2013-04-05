@@ -1,14 +1,14 @@
-package com.remuladgryta.modjam.test;
+package com.remuladgryta.speech.test;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 
-@Mod(modid = "modjamtest",name ="Mod jam test mod 2013", version = "0.2", dependencies = "required-after:ModjamMod")
+@Mod(modid = "modjamtest",name ="Mod jam test mod 2013", version = "0.2", dependencies = "required-after:SpeechAPI")
 public class ModjamTest {
 
-	@SidedProxy(clientSide = "com.remuladgryta.modjam.test.ClientProxy", serverSide = "com.remuladgryta.modjam.test.CommonProxy")
+	@SidedProxy(clientSide = "com.remuladgryta.speech.test.ClientProxy", serverSide = "com.remuladgryta.speech.test.CommonProxy")
 	public static CommonProxy proxy;
 
 

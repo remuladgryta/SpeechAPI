@@ -1,4 +1,4 @@
-package com.remuladgryta.modjam.test;
+package com.remuladgryta.speech.test;
 
 import java.net.URI;
 import java.util.ArrayList;
@@ -8,10 +8,10 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.ServerChatEvent;
 
-import com.remuladgryta.modjam.API;
-import com.remuladgryta.modjam.LogHelper;
-import com.remuladgryta.modjam.RecordingTracker;
-import com.remuladgryta.modjam.SpeechDetectionEvent;
+import com.remuladgryta.speech.API;
+import com.remuladgryta.speech.LogHelper;
+import com.remuladgryta.speech.RecordingTracker;
+import com.remuladgryta.speech.SpeechDetectionEvent;
 
 public class ClientProxy extends CommonProxy {
 	@Override
