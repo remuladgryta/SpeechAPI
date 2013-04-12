@@ -1,7 +1,7 @@
 SpeechAPI
 ==========
 
-Inspired by modjam 2013
+Inspired by modjam easter 2013
 
 This mod depends on the third party library CMU Sphinx 4 available at http://cmusphinx.sourceforge.net/ as well as the Java Speech API.
 The specific build artifacts from those projects that are used are:
